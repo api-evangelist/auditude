@@ -1,22 +1,77 @@
 aid: auditude
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/auditude.png
 name: Auditude
-description: Auditude is a company surfaced as a portfolio company of redpoint-ventures and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: 'Auditude was a Palo Alto video advertising technology company founded
+  in 2007 that let premium publishers, content owners and media companies manage,
+  serve and monetize advertising around online video across multiple platforms and
+  devices via its proprietary Auditude Connect platform. Backed by Redpoint Ventures
+  and Greylock Partners with roughly $38M raised, its customers included Comcast,
+  Sony Music and Universal Music Group. Adobe acquired Auditude in November 2011 for
+  a reported ~$120M and folded the technology into Adobe Primetime (ad decisioning /
+  ad insertion), since rebranded under Adobe Pass. Auditude no longer operates as an
+  independent company: auditude.com does not resolve, and the only surviving public
+  footprint is the legacy com.auditude.ads.* namespace inside Adobe''s Primetime
+  Player SDK documentation. This profile is retained as a defunct / acquired
+  historical record; there is no Auditude API surface to catalog.'
 url: https://raw.githubusercontent.com/api-evangelist/auditude/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - redpoint-ventures
-x-tier: stub
-x-tier-reason: portfolio-lead
+- greylock-partners
+x-tier: defunct
+x-tier-reason: acquired-by-adobe-2011-no-api-surface
+x-status: acquired
+x-acquired-by: Adobe
+x-acquired-date: '2011-11-01'
+x-successor-product: Adobe Primetime (now Adobe Pass)
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Advertising
+- Video
+- Video Advertising
+- Ad Tech
+- Monetization
+- Media
+- Defunct
+- Acquired
 apis: []
+common:
+- type: Acquisition
+  url: https://www.adexchanger.com/press-release/adobe-acquires-auditude/
+- type: Successor
+  url: https://helpx.adobe.com/legal/product-descriptions/adobe-primetime-ad-insertion-and-transcoding.html
+- type: Archive
+  url: http://web.archive.org/web/20120628092451/http://www.auditude.com:80/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: nochange
+  artifacts_added: 0
+  pass: local-v1
+  finding: >-
+    Defunct. Acquired by Adobe 2011-11-01 (~$120M) and folded into Adobe Primetime /
+    Adobe Pass. Probed 2026-07-19: auditude.com, www.auditude.com and api.auditude.com
+    have no A or NS records (domain registered via GoDaddy through 2027 but parked);
+    last Wayback snapshot 2012-06-28. No npm packages (registry search total=0), no
+    PyPI project (404), no GitHub org (404). No developer portal, docs, OpenAPI,
+    well-known surface or SDKs exist to capture. No artifacts written by design --
+    absence is the honest result, not a gap to fill.
